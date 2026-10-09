@@ -278,7 +278,7 @@ function explode(x, y, big) {
 // ================= 实体工厂 =================
 function makePlayer() {
   const px = 12 * TILE + (TILE * 2 - TANK) / 2;   // 底部中央
-  const py = 22 * TILE + (TILE * 2 - TANK) / 2;
+  const py = 21 * TILE + (TILE * 2 - TANK) / 2;   // 第 21-22 行，避开基地上方的守卫砖(第 23 行)
   return {
     x: px, y: py, dir: "up", type: "player",
     speed: PLAYER_SPEED, w: TANK, h: TANK,
